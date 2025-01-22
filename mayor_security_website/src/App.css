@@ -1,0 +1,55 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Custom font classes */
+/* Regular 400 */
+.regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* Medium 500 */
+.medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* SemiBold 600 */
+.semi-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+/* ExtraBold 700 */
+.extra-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+/* SemiBold 600 Italic */
+.semi-bold-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+
