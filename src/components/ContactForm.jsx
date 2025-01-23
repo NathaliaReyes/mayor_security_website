@@ -190,7 +190,7 @@ function ContactForm() {
             <textarea
               name="message"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Message for Harmony Wellness & Spa"
+              placeholder="Message for Mayor Security, LCC"
               value={message}
               onChange={handleChange}
               rows={5}

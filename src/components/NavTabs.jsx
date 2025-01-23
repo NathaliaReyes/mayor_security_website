@@ -44,9 +44,9 @@ function NavTabs() {
                 </button>
             </div>
             <div className="space-y-2 text-center mt-2">
-                <h1 className="leading-none extra-bold text-4xl" >MAYOR SECURITY LLC</h1>
+                <h1 className="leading-none extra-bold text-5xl mt-4">MAYOR SECURITY LLC</h1>
                 <p className="text-sm ">
-                    This is the slogan!!
+                    "Your Safety is Our Priority"
                 </p>
                 <Separator className="my-2" />
                 <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
+import BannerInfo from './components/home/BannerInfo';
 import Footer from './components/Footer';
 // import NavBar from './components/NavTabs';
 import './App.css';
@@ -8,6 +9,7 @@ import './App.css';
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
+      <BannerInfo />
       <Header />
       <main className="flex-1">
         <Outlet />
