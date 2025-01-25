@@ -16,8 +16,8 @@ const BannerInfo = () => {
                     <strong><a href="tel:+17204682411"> +1 (720) 468-2411</a></strong>
                 </span>
                 <a href="http://harmony-wellness-spa-102368.square.site" target="_blank" rel="noopener noreferrer">
-                    <Button className='m-2 lg:text-lg md:text-base sm:text-base  text-black font-bold hover:text-black hover:border-white hover:border-2 hover:shadow-lg hover:shadow-white/50' style={{ backgroundColor: '#C00F0C', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', textShadow: '0 0 2px #333' }}>
-                        Get a Quote
+                    <Button className='m-2 lg:text-lg md:text-base sm:text-base  text-black font-bold hover:text-black hover:border-white hover:border-2 hover:shadow-lg hover:shadow-black/90' style={{ backgroundColor: '#C00F0C', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', textShadow: '0 0 2px #333' }}>
+                        Get a Quote!
                     </Button>
                 </a>
             </div>
