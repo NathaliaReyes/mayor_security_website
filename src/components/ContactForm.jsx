@@ -4,7 +4,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 function ContactForm() {
-  const [state, handleSubmitFormspree] = useForm("xkgwnerl");
+  const [state, handleSubmitFormspree] = useForm("mnnjpblo");
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
   const [email, setEmail] = useState('');
@@ -97,38 +97,44 @@ function ContactForm() {
       )}
 
       <div className="flex justify-center items-center ml-4 mr-4 mb-4">
-        <form onSubmit={handleSubmit} className="p-5 md:w-1/2 w-full  bg-gray-100 rounded-lg mt-5">
+        <form onSubmit={handleSubmit} className="p-5 md:w-3/4 w-full  bg-gray-100 rounded-lg mt-5">
           <h2 className="text-2xl font-extrabold ml-4 mt-5 mb-5 tracking-normal">Get in touch</h2>
-          <p className="text-black mb-6 ml-4">Thank you for choosing Mayor Security, LCC we are here for you!</p>
-          <h2 className="text-xl font-bold tracking-normal ml-4 mt-4 md:mt-8 mb-5 md:mb-5">Drop us a line</h2>
+          <p className="text-black mb-6 ml-4">If you have any questions or comments, please fill out this form and we’ll get back to you as soon
+            as we can.  If you need to speak with someone right away you can call us at (720) 468-2411.  We’re looking forward to hearing from you!</p>
+          {/* <h2 className="text-xl font-bold tracking-normal ml-4 mt-4 md:mt-8 mb-5 md:mb-5">Drop us a line</h2> */}
           {!fieldsCompleted && <p className="text-red-500 text-xs mt-2">Please fill out all required fields.</p>}
 
-          <div className="mb-4 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
-            <input
-              name="firstName"
-              value={firstName}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              placeholder="First Name"
-              onChange={handleChange}
-            />
-            {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
+          <div className='grid grid-cols-1 md:grid-cols-2'>
+            <div className="mb-4 ml-4 mr-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+              <input
+                name="firstName"
+                value={firstName}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                required
+                placeholder="John"
+                onChange={handleChange}
+              />
+              {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
+            </div>
+
+            <div className="mb-4 ml-4 mr-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+              <input
+                name="lastName"
+                value={lastName}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                required
+                placeholder="Doe"
+                onChange={handleChange}
+              />
+              {nameRequired && <p className="text-red-500 text-xs mt-2">Last Name is required.</p>}
+            </div>
           </div>
 
-          <div className="mb-4 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
-            <input
-              name="lastName"
-              value={lastName}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              placeholder="Last Name"
-              onChange={handleChange}
-            />
-            {nameRequired && <p className="text-red-500 text-xs mt-2">Last Name is required.</p>}
-          </div>
-
+<div className='grid grid-cols-1 md:grid-cols-2 items-center'>
           <div className="mb-4 ml-4 mr-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
             <input
@@ -136,7 +142,8 @@ function ContactForm() {
               value={email}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="email"
-              placeholder="user@email.com"
+              required
+              placeholder="john.doe@example.com"
               onChange={handleChange}
             />
             {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
@@ -148,7 +155,8 @@ function ContactForm() {
             <PhoneInput
               name="phone"
               value={phone}
-              placeholder="Enter phone number"
+              placeholder="(123) 456-7890"
+              type="tel"
               className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               onChange={handlePhoneChange}
               defaultCountry="US" />
@@ -162,6 +170,8 @@ function ContactForm() {
             onChange={handleChange}
           /> */}
           </div>
+
+</div>
 
           <div className="mb-4 ml-4 mr-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">I am interested in:</label>
@@ -179,8 +189,8 @@ function ContactForm() {
                 <option value="Home Security Systems">Home Security Systems</option>
                 <option value="Event Security Services">Event Security Services</option>
                 <option value="Security Consultations">Security Consultations</option>
-                <option value="Careers">Careers</option>
-                <option value="Feedback">Feedback</option>
+                {/* <option value="Careers">Careers</option> */}
+                {/* <option value="Feedback">Feedback</option> */}
                 <option value="Other">Other</option></select>
             </div>
           </div>

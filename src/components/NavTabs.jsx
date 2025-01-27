@@ -5,7 +5,8 @@ import { Separator } from "@/components/ui/separator";
 
 
 function NavTabs() {
-    const currentPage = useLocation().pathname;
+    const location = useLocation();
+    const [currentPage, setCurrentPage] = useState(location.pathname);
     const [isActive, setIsActive] = useState(false);
 
     const toggleMenu = () => {
@@ -13,26 +14,11 @@ function NavTabs() {
     };
 
     useEffect(() => {
-        let pageTitle = '';
-        switch (currentPage) {
-            case '/':
-                pageTitle = 'Home';
-                break;
-            case '/About':
-                pageTitle = 'About';
-                break;
-            case '/Contact':
-                pageTitle = 'Contact Us';
-                break;
-            default:
-                pageTitle = "Mayor Security, LLC."
-                break;
-        }
-        document.title = `${pageTitle} | Mayor Security, LLC.`
-    }, [currentPage]);
+        setCurrentPage(location.pathname);
+    }, [location.pathname]);
 
     return (
-        <nav className="flex items-center justify-between flex-wrap bg-mainBg">
+        <nav className="flex items-center justify-around flex-wrap bg-mainBg py-2">
             <div className="flex items-center flex-shrink-0 text-white m-1">
                 <img src={logo} alt="logo" className='md:h-28 md:w-28 h-20 w-20 ml-1'></img>
             </div>
@@ -43,20 +29,18 @@ function NavTabs() {
                     <div className="w-3 h-0.5 bg-stone"></div>
                 </button>
             </div>
-            <div className="space-y-2 text-center mt-2">
-                <h1 className="leading-none extra-bold text-5xl mt-4">MAYOR SECURITY LLC</h1>
-                <p className="text-sm ">
+            <div className="text-center pt-4">
+                <h1 className="leading-none extra-bold text-5xl tracking-tight">MAYOR SECURITY LLC</h1>
+                <p className="text-sm pb-4">
                     "Your Safety is Our Priority"
                 </p>
-                <Separator className="my-2" />
-                <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
-                    <div className="lg:text-lg md:text-base sm:text-sm md:flex-grow mr-5 ml-2 mb-2 flex items-center space-x-4">
-                        <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-mainBrown mr-4' : 'block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-clear mr-4'}>Home</Link>
-                        <Separator orientation="vertical" className="h-6" />
-                        <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-mainBrown mr-4' : 'block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-clear mr-4'}>About Us</Link>
-                        <Separator orientation="vertical" className="h-6" />
-                        <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-mainBrown mr-4' : 'block mt-4 md:inline-block md:mt-0 text-mainYellow hover:text-clear mr-4'}>Contact Us</Link>
-                    </div>
+                {/* <Separator className="my-2" /> */}
+                <div className="md:text-base text-sm flex space-x-8 justify-center">
+                    <Link to="/" className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Home</Link>
+                    <Separator orientation="vertical" className="h-6" />
+                    <Link to="/About"  className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 hover:text-red-500 mr-4 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>About Us</Link>
+                    <Separator orientation="vertical" className="h-6" />
+                    <Link to="/Contact"  className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Contact Us</Link>
                 </div>
             </div>
             <div className="flex items-center flex-shrink-0 text-white m-1">

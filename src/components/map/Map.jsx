@@ -41,9 +41,9 @@ const ResponsiveIframe = () => {
 
 const LocationMap = () => {
     return (
-        <div className="flex flex-col md:flex-row justify-around items-center">
+        <div className="flex flex-col md:flex-row justify-evenly items-center">
             {/* Map section */}
-            <div className="md:w-1/2 w-full pr-4 md:p-0">
+            <div className="md:w-2/5 pr-4 md:p-0">
                 <ResponsiveIframe />
                 {/* Text section */}
                 <div className="text-center m-3">
