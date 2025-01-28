@@ -2,7 +2,7 @@ import React from 'react';
 // import InstagramButtonIcon from "@/components/icons/instagramIcon";
 import FacebookIcon from "@/components/icons/FacebookIcon";
 import GoogleMapsIcon from "@/components/icons/GoogleIcon";
-import WhatsAppIcon from "@/components/icons/WhatsappIcon";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 // import '../styles/Footer.css';
 
 function Footer() {
