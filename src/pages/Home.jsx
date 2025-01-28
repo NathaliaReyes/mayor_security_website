@@ -13,7 +13,7 @@ import CarouselDefault from '../components/home/Testimonial';
 const Home = () => {
     return (
         <>
-            <img className='mx-auto' src={Image} alt="banner" style={{ width: '100%', height: '70vh', objectFit: 'fill', }} />
+            <img className='mx-auto h-60 md:h-72 w-screen' src={Image} alt="banner"/>
             {/* <div className="content-container m-6 "> */}
                 {/* <div > */}
                     {/* <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-2">
