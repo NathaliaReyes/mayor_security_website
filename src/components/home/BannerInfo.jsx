@@ -7,7 +7,7 @@ const BannerInfo = () => {
         <div className='bg-gray-800 flex items-center justify-around px-4 py-2'>
             <div className='flex items-center'>
                 <i className="fas fa-phone mr-2 text-white"></i>
-                <span style={{ marginRight: '20px', color: 'white', textShadow: '0 0 2px white' }} className='text-xl'>
+                <span  className='text-base sm:text-lg md:text-xl mr-3 text-white'>
                     <strong><a href="tel:+17204682411"> +1 (720) 468-2411</a></strong>
                 </span>
             </div>

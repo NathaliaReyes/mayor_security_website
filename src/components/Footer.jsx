@@ -1,8 +1,8 @@
 import React from 'react';
 // import InstagramButtonIcon from "@/components/icons/instagramIcon";
-// import FacebookIcon from "@/components/icons/facebookIcon";
-// import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
-// import WhatsAppIcon from "@/components/icons/whatsappIcon";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import GoogleMapsIcon from "@/components/icons/GoogleIcon";
+import WhatsAppIcon from "@/components/icons/whatsappIcon";
 // import '../styles/Footer.css';
 
 function Footer() {
@@ -12,9 +12,9 @@ function Footer() {
         <p className="m-3 text-center text-gray-200 text-xs opacity-50">Connect with us!</p>
       </div>
       <div className="flex gap-4">
-        {/* <WhatsAppIcon /> */}
-        {/* <InstagramButtonIcon /> */}
-        {/* <FacebookIcon /> */}
+        <WhatsAppIcon />
+        <GoogleMapsIcon />
+        <FacebookIcon />
         {/* <LinkedinButtonIcon /> */}
       </div>
       <div>
