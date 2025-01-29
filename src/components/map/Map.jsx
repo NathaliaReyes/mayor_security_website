@@ -54,7 +54,7 @@ const LocationMap = () => {
             </div>
 
             {/* lOCATION SECTION */}
-            <div className="lg:w-2/5 w-full my-2 md:my-auto md:pl-8 mx-auto text-center">
+            <div className="lg:w-2/5 w-full my-3 md:my-auto md:pl-8 mx-auto text-center">
                 <div className='justify-evenly flex'>
                     <div className='flex-1'>
                         <h2 className="md:text-xl text-lg font-bold md:mb-2">

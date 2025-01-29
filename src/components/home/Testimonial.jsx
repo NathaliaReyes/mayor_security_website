@@ -6,8 +6,8 @@ import Test4 from "../../assets/testimonials/test4.jpg";
 
 export default function CarouselTestimonials() {
   return (
-    <div className="p-2 justify-center items-center">
-      <h2 className="text-lg sm:text-xl font-bold text-center text-gray-800 my-4">What Our Clients Say</h2>
+    <div className="px-2 pb-2 justify-center items-center">
+      <h2 className="text-lg sm:text-xl font-bold text-center text-gray-800 my-2 md:my-4">What Our Clients Say</h2>
       <Carousel className="rounded-xl ">
         <div className="relative h-full w-full">
           <img
