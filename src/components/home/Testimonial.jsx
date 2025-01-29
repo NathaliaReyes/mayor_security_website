@@ -1,15 +1,15 @@
 import { Carousel, Typography, Rating } from "@material-tailwind/react";
-import Test1 from "../../assets/testimonials/testimonial1.jpg";
-import Test2 from "../../assets/testimonials/testimonial2.jpg";
-import Test3 from "../../assets/testimonials/testimonial3.jpg";
-import Test4 from "../../assets/testimonials/testimonial4.jpg";
+import Test1 from "../../assets/testimonials/test1.jpg";
+import Test2 from "../../assets/testimonials/test2.jpg";
+import Test3 from "../../assets/testimonials/test3.jpg";
+import Test4 from "../../assets/testimonials/test4.jpg";
 
-export default function CarouselDefault() {
+export default function CarouselTestimonials() {
   return (
     <div className="p-2 justify-center items-center">
-      <h2 className="text-xl font-bold text-center text-gray-800 my-8">What Our Clients Say</h2>
+      <h2 className="text-lg sm:text-xl font-bold text-center text-gray-800 my-4">What Our Clients Say</h2>
       <Carousel className="rounded-xl ">
-      <div className="relative h-full w-full">
+        <div className="relative h-full w-full">
           <img
             src={Test2}
             alt="image 2"
@@ -22,16 +22,15 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
               >
-                "Lynn McHugh. ~ Brandon, FL"
+                "McDonald's Manager. ~ Aurora, CO"
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Nancy is a fantastic therapist skilled in Therapeutic massage, cupping, and hot stone massage.
-                Her knowledge and nurturing nature helped me feel better. Her great smile and care kept me coming back.
-                I'm grateful we met!"
+                "Mayor Security Company is our trusted partner for
+                ensuring the safety of our retail locations."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -50,22 +49,22 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
               >
-                "John Marshall. ~ Brandon, FL"
+                "Lowes Manager. ~ Denver, CO"
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Enjoyed another great massage and wanted to recommend Nancy,
-                who was very professional and a super nice person. The deep
-                tissue was assume."
+                "Mayor Security LLC delivers comprehensive
+                security services for our premises with
+                professionalism and adaptability."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
           </div>
         </div>
-        
+
         <div className="relative h-full w-full">
           <img
             src={Test3}
@@ -79,15 +78,16 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
               >
-                "Alma Santana. ~ Brandon, FL"
+                "Marq Iliff Manager. ~ Aurora, CO"
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
-                className="mb-5 lg:text-xl md:text-lg sm:text-base text-xl opacity-80"
+                className="mb-5 lg:text-xl md:text-lg sm:text-base text-sm opacity-80"
               >
-                "I had a great experience with the service I received! <br />
-                Definitely will go back again!"
+                "Mayor Security company maintains a safe
+                environment for our residents at Marq Iliff
+                Apartments."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -106,17 +106,17 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
               >
-                "Lance E. ~ Brandon, FL"
+                "Angels Jewelry Manager. ~ Aurora, CO"
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-sm opacity-80"
               >
-                "I can't say enough pleasant things about Nancy.  I’ve seen her several 
-                times and always a great experience. I like deep tissue for my back and 
-                shoulder pain and Nancy provides the perfect pressure.  She also 
-                confirms the pressure is OK throughout the massage."
+                "Mayor Security Company's guards have been instrumental in
+                safeguarding our jewelry store. Their professionalism and
+                vigilance provide reassurance to both our staff and customers,
+                ensuring a secure shopping environment."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>

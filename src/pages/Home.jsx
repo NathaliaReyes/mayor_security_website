@@ -6,7 +6,7 @@ import Map from '../components/map/Map';
 import BannerServices from '@/components/home/BannerServices';
 import Personal from '@/components/home/Personal';
 import '../styles/Home.css'; // Import the CSS file
-import CarouselDefault from '../components/home/Testimonial';
+import CarouselTestimonials from '@/components/home/Testimonial';
 // import TeamCard from '../components/home/professionalProfile';
 // import GoogleReview from '@/components/home/GoogleReview';
 
@@ -38,7 +38,8 @@ const Home = () => {
             {/* </div> */}
             <BannerServices />
             <Map />
-            <Personal />
+            {/* <Personal /> */}
+            <CarouselTestimonials />
             {/* <CarouselDefault /> */}
         </>
     );
