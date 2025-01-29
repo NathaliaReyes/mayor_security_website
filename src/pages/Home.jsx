@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Image from '../assets/home/portadams.jpg';
 import Map from '../components/map/Map';
 import BannerServices from '@/components/home/BannerServices';
-import Personal from '@/components/home/Personal';
 import '../styles/Home.css'; // Import the CSS file
 import CarouselTestimonials from '@/components/home/Testimonial';
 // import TeamCard from '../components/home/professionalProfile';
@@ -40,7 +39,6 @@ const Home = () => {
             <Map />
             {/* <Personal /> */}
             <CarouselTestimonials />
-            {/* <CarouselDefault /> */}
         </>
     );
 }

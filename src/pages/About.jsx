@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Personal from '@/components/home/Personal';
 
 const About = () => {
   return (
     <div>
-      About
+      <Personal />
     </div>
   )
 }
