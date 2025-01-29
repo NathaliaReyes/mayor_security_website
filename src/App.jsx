@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen max-w-full">
+    <div className="flex flex-col min-h-screen">
       <BannerInfo />
       <Header />
       <main className="flex-1">
