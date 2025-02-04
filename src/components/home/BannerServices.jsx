@@ -7,6 +7,7 @@ import Icon2 from '@/assets/home/patrol.png';
 import Icon3 from '@/assets/home/armedGuard.png';
 
 // import { Button } from "@/components/ui/button";
+import "../../styles/Fonts.css";
 
 const BannerServices = () => {
 	useEffect(() => {
