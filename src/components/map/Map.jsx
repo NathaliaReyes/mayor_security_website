@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from 'flowbite-react';
 import GoogleReview from '../home/GoogleReview';
+import "../../styles/Fonts.css";
 
 const ResponsiveIframe = () => {
     // Initial state for iframe height
@@ -28,7 +29,7 @@ const ResponsiveIframe = () => {
 
     return (
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d529.9821255259652!2d-104.81129755540275!3d39.72506765533986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c631cba02d60f%3A0x89a31bc8906a610d!2sChambers%20Office%20Centre!5e0!3m2!1ses!2sus!4v1737664539075!5m2!1ses!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.818320343149!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c63dd643fa75b%3A0x82634622fac345f9!2sMayor%20Security%20LLC!5e0!3m2!1ses!2sus!4v1738687444118!5m2!1ses!2sus" 
             width="400"
             height={iframeHeight}
             className="border-0 w-full ml-2 mr-2 shadow-lg p-4"
@@ -58,18 +59,18 @@ const LocationMap = () => {
                 <div className="lg:w-2/5 w-full my-3 md:my-auto md:pl-8 mx-auto text-center">
                     <div className='justify-evenly flex'>
                         <div className='flex-1'>
-                            <h2 className="md:text-xl text-lg font-bold md:mb-2">
+                            <h2 className="roboto600 md:text-xl text-lg font-bold md:mb-2">
                                 <i className="fas fa-clock mr-2"></i>Hours
                             </h2>
                             <ul className="list-none leading-normal space-y-0.5">
-                                <li><span className="font-bold">Mon - Fri: </span>8:00 - 16:30</li>
-                                <li><span className="font-bold">Sat: </span>8:00 - 12:00</li>
-                                <li><span className="font-bold">Sun: </span>Closed</li>
+                                <li><span className="font-bold roboto700">Mon - Fri: </span>8:00 - 16:30</li>
+                                <li><span className="font-bold roboto700">Sat: </span>8:00 - 12:00</li>
+                                <li><span className="font-bold roboto700">Sun: </span>Closed</li>
                             </ul>
                         </div>
 
                         <div className='flex-1 md:ml-2'>
-                            <h2 className="md:text-xl text-lg font-bold">
+                            <h2 className="md:text-xl text-lg font-bold roboto600">
                                 <i className="fas fa-phone mr-2"></i>Phone
                             </h2>
                             <p>
@@ -79,13 +80,13 @@ const LocationMap = () => {
                     </div>
 
                     <div className='my-4'>
-                        <h2 className="md:text-xl text-lg font-bold">
+                        <h2 className="md:text-xl text-lg font-bold roboto600">
                             <i className="fas fa-map-marker-alt mr-2 mb-2"></i>Location
                         </h2>
                         <p>
                             15290 E 6th Ave Aurora, CO  80011<br />
                             Suite 290 USA <br />
-                            <a className="text-blueMedium hover:text-blue-gray-600 flex justify-center font-semibold underline mt-2" href="https://www.google.com/maps/place/Chambers+Office+Centre/@39.7250677,-104.8112976,19.53z/data=!3m1!5s0x876c62e17ee3109d:0x3389b8a311d81572!4m15!1m8!3m7!1s0x876c631cb0816aa7:0xb1948f02ed63c5f!2sParking+lot,+15290+E+6th+Ave,+Aurora,+CO+80011!3b1!8m2!3d39.7250819!4d-104.8111263!16s%2Fg%2F11bw3xx0ym!3m5!1s0x876c631cba02d60f:0x89a31bc8906a610d!8m2!3d39.7250709!4d-104.8112258!16s%2Fg%2F11fntctyh4?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                            <a className="text-blueMedium hover:text-blue-gray-600 flex justify-center font-semibold underline mt-2" href="https://www.google.com/maps/place/Mayor+Security+LLC/@39.7250689,-104.8137654,17z/data=!3m1!4b1!4m6!3m5!1s0x876c63dd643fa75b:0x82634622fac345f9!8m2!3d39.7250648!4d-104.8111905!16s%2Fg%2F11lz_9yyvd?hl=es&entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                                 Get Directions ⭢
                             </a>
                         </p>

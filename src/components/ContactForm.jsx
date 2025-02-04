@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import "../styles/Fonts.css";
 
 function ContactForm() {
-  const [state, handleSubmitFormspree] = useForm("mnnjpblo");
+  const [state, handleSubmitFormspree] = useForm("xnnjvkgw");
   const [firstName, setfirstName] = useState('');
   const [lastName, setlastName] = useState('');
   const [email, setEmail] = useState('');
@@ -79,7 +80,7 @@ function ContactForm() {
     <>
       {submitted && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-2 text-center relative">
+          <div className="roboto bg-white rounded-lg shadow-lg p-2 text-center relative">
             <button
               onClick={() => {
                 setSubmitted(false);
@@ -97,20 +98,20 @@ function ContactForm() {
       )}
 
       <div className="flex justify-center items-center ml-4 mr-4 mb-4">
-        <form onSubmit={handleSubmit} className="p-5 md:w-3/4 w-full  bg-gray-100 rounded-lg mt-5">
-          <h2 className="text-2xl font-extrabold ml-4 mt-5 mb-5 tracking-normal">Get in touch</h2>
-          <p className="text-black mb-6 ml-4">If you have any questions or comments, please fill out this form and we’ll get back to you as soon
+        <form onSubmit={handleSubmit} className="p-5 md:w-3/4 w-full  bg-gray-100 rounded-lg">
+          <h2 className="lora600 text-2xl font-extrabold ml-4 my-3 tracking-normal">Get In Touch</h2>
+          <p className="roboto text-black mb-2 ml-4">If you have any questions or comments, please fill out this form and we’ll get back to you as soon
             as we can.  If you need to speak with someone right away you can call us at (720) 468-2411.  We’re looking forward to hearing from you!</p>
           {/* <h2 className="text-xl font-bold tracking-normal ml-4 mt-4 md:mt-8 mb-5 md:mb-5">Drop us a line</h2> */}
           {!fieldsCompleted && <p className="text-red-500 text-xs mt-2">Please fill out all required fields.</p>}
 
           <div className='grid grid-cols-1 md:grid-cols-2'>
-            <div className="mb-4 ml-4 mr-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+            <div className="mx-4">
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Name</label>
               <input
                 name="firstName"
                 value={firstName}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 required
                 placeholder="John"
@@ -119,12 +120,12 @@ function ContactForm() {
               {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
             </div>
 
-            <div className="mb-4 ml-4 mr-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+            <div className="mx-4">
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Last Name</label>
               <input
                 name="lastName"
                 value={lastName}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 required
                 placeholder="Doe"
@@ -134,34 +135,34 @@ function ContactForm() {
             </div>
           </div>
 
-<div className='grid grid-cols-1 md:grid-cols-2 items-center'>
-          <div className="mb-4 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-            <input
-              name="email"
-              value={email}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="email"
-              required
-              placeholder="john.doe@example.com"
-              onChange={handleChange}
-            />
-            {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
-            {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
-          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+            <div className="mb-2 mx-4">
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Email</label>
+              <input
+                name="email"
+                value={email}
+                className="lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="email"
+                required
+                placeholder="john.doe@example.com"
+                onChange={handleChange}
+              />
+              {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
+              {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
+            </div>
 
-          <div className="mb-4 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-            <PhoneInput
-              name="phone"
-              value={phone}
-              placeholder="(123) 456-7890"
-              type="tel"
-              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-              onChange={handlePhoneChange}
-              defaultCountry="US" />
-            {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone Number is required.</p>}
-            {/* <input
+            <div className="mb-2 ml-4 mr-4">
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Phone Number</label>
+              <PhoneInput
+                name="phone"
+                value={phone}
+                placeholder="(123) 456-7890"
+                type="tel"
+                className='lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                onChange={handlePhoneChange}
+                defaultCountry="US" />
+              {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone Number is required.</p>}
+              {/* <input
             name="phone"
             value={phone}
             className={`shadow appearance-none border ${!emailValid ? 'border-red-500' : ''} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
@@ -169,18 +170,18 @@ function ContactForm() {
             placeholder="email@example.com"
             onChange={handleChange}
           /> */}
+            </div>
+
           </div>
 
-</div>
-
-          <div className="mb-4 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">I am interested in:</label>
+          <div className="mb-4 mx-4">
+            <label className="lora400 block text-gray-700 text-sm font-bold my-2">I am interested in:</label>
             <div className="relative">
               <select
                 name="inquiry"
                 value={inquiry}
                 onChange={handleChange}
-                className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                className="lora400 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
               >
                 <option value="" disabled>I am looking for:</option>
                 <option value="General Inquiry">General Inquiry</option>
@@ -196,10 +197,10 @@ function ContactForm() {
           </div>
 
           <div className="mb-6 ml-4 mr-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+            <label className="lora400 block text-gray-700 text-sm font-bold mb-2">Message</label>
             <textarea
               name="message"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Message for Mayor Security, LCC"
               value={message}
               onChange={handleChange}
@@ -208,7 +209,7 @@ function ContactForm() {
             {messageRequired && <p className="text-red-500 text-xs mt-2">Message is required.</p>}
           </div>
 
-          <div className="flex items-center justify-center space-x-2">
+          <div className="lora600 flex items-center justify-center space-x-2">
             <button type="submit" disabled={state.submitting} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Send
             </button>

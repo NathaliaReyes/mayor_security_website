@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo/logo.png';
 import { Separator } from "@/components/ui/separator";
+import "../styles/Fonts.css";
 
 
 function NavTabs() {
@@ -24,11 +25,11 @@ function NavTabs() {
                     <img src={logo} alt="logo" className='md:h-28 md:w-28 sm:h-24 sm:w-24 h-16 w-16'></img>
                 </div>
                 <div className="flex-grow flex flex-col items-center justify-center pt-4">
-                    <h1 className="leading-none extra-bold text-lg sm:text-3xl md:text-4xl lg:text-5xl tracking-tight">MAYOR SECURITY LLC</h1>
-                    <p className="text-xs md:text-base pb-4">
+                    <p className="lora600 text-lg sm:text-3xl md:text-4xl lg:text-5xl ">MAYOR SECURITY LLC</p>
+                    <p className="lora400 text-xs md:text-base pt-2 pb-4">
                         "Your Safety is Our Priority"
                     </p>
-                    <div className="md:text-base text-sm md:flex space-x-8 justify-center hidden">
+                    <div className="lora500 md:text-base text-sm md:flex space-x-8 justify-center hidden">
                         <Link to="/" className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Home</Link>
                         <Separator orientation="vertical" className="h-6" />
                         <Link to="/About" className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 hover:text-red-500 mr-4 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>About Us</Link>
@@ -48,7 +49,7 @@ function NavTabs() {
                 </div>
             </nav>
             <div className={`w-full ${isActive ? 'flex flex-col bg-mainBg' : 'hidden'}`} id="navMenu">
-                <div className="lg:text-lg md:text-base sm:text-sm mr-5 ml-2 mb-2">
+                <div className="lora500 lg:text-lg md:text-base sm:text-sm mr-5 ml-4 mb-2">
                     <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0   mr-4' : 'block mt-4 md:inline-block md:mt-0  mr-4'}>Home</Link>
                     <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>About</Link>
                     <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Contact Us</Link>

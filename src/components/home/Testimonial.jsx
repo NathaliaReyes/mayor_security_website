@@ -3,11 +3,12 @@ import Test1 from "../../assets/testimonials/test1.jpg";
 import Test2 from "../../assets/testimonials/test2.jpg";
 import Test3 from "../../assets/testimonials/test3.jpg";
 import Test4 from "../../assets/testimonials/test4.jpg";
+import "../../styles/Fonts.css";
 
 export default function CarouselTestimonials() {
   return (
     <div className="px-2 pb-2 justify-center items-center">
-      <h2 className="text-lg sm:text-xl font-extrabold text-center text-gray-800 mt-5 mb-3">What Our Clients Say</h2>
+      <h2 className="roboto700 text-lg sm:text-xl font-extrabold text-center text-gray-800 mt-5 mb-3">What Our Clients Say</h2>
       <Carousel className="rounded-xl ">
         <div className="relative h-full w-full">
           <img
@@ -20,7 +21,7 @@ export default function CarouselTestimonials() {
               <Typography
                 variant="h2"
                 color="white"
-                className="mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
+                className=" mb-4 lg:text-xl md:text-lg sm:text-base text-base mt-2"
               >
                 "McDonald's Manager. ~ Aurora, CO"
               </Typography>
