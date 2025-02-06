@@ -45,7 +45,7 @@ const LocationMap = () => {
         <>
             <div className="flex flex-col md:flex-row">
                 {/* Map section */}
-                <div className="w-full lg:w-3/5 py-4">
+                <div className="w-full lg:w-7/12 py-4">
                     <ResponsiveIframe />
                     {/* Text section */}
                     {/* <div className="text-center m-3">
@@ -56,7 +56,7 @@ const LocationMap = () => {
                 </div>
 
                 {/* lOCATION SECTION */}
-                <div className="lg:w-2/5 w-full my-3 md:my-auto md:pl-8 mx-auto text-center">
+                <div className="lg:w-5/12 w-full my-3 md:my-auto  mx-auto text-center">
                     <div className='justify-evenly flex'>
                         <div className='flex-1'>
                             <h2 className="roboto600 md:text-xl text-lg font-bold md:mb-2">
@@ -69,12 +69,15 @@ const LocationMap = () => {
                             </ul>
                         </div>
 
-                        <div className='flex-1 md:ml-2'>
-                            <h2 className="md:text-xl text-lg font-bold roboto600">
-                                <i className="fas fa-phone mr-2"></i>Phone
+                        <div className='flex-1 md:mx-1'>
+                            <h2 className="md:text-xl text-lg font-bold roboto600 md:mb-2">
+                                <i className="fas fa-envelope mr-2"></i>Contact Us
                             </h2>
                             <p>
                                 <a className="text-blueMedium hover:text-blue-gray-600" href="tel:+17204682411">+1 (720) 468-2411</a>
+                            </p>
+                            <p>
+                                <a className="text-blueMedium hover:text-blue-gray-600" href="mailto:billing@mayorsecurity.com">billing@mayorsecurity.com</a>
                             </p>
                         </div>
                     </div>
