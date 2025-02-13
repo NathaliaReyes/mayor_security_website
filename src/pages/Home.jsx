@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";  // Asegúrate de importar tu componente de botón correctamente
 import { Link } from 'react-router-dom';
 import Image from '../assets/home/portadams.jpg';
+import videoBanner2 from '@/assets/home/Mayor_Website.mp4';
 import Map from '../components/map/Map';
 import BannerServices from '@/components/home/BannerServices';
 import '../styles/Home.css'; // Import the CSS file
@@ -12,13 +13,30 @@ import CarouselTestimonials from '@/components/home/Testimonial';
 const Home = () => {
     return (
         <>
-            <img
+            {/* <div className="hidden md:flex relative z-10 video-container mx-auto  justify-center">
+                <video className="w-full h-auto flex" controls>
+                    <source src={videoBanner} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div> */}
+            <div className=' inset-0' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className=' inset-0 bg-black opacity-100'>
+                <div className=" relative z-10 video-container flex justify-center md:py-4">
+                    <video className="w-auto md:h-96 flex" controls>
+                        <source src={videoBanner2} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+            </div>
+            {/* <img
                 className='mx-auto h-60 md:h-72 w-screen'
                 src={Image}
                 alt="banner"
                 loading="lazy"
                 width="1920"
-                height="1080" />
+                height="1080" /> */}
             {/* <div className="content-container m-6 "> */}
             {/* <div > */}
             {/* <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-2">
