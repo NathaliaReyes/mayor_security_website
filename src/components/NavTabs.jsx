@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo/logo.png';
 import { Separator } from "@/components/ui/separator";
 import "../styles/Fonts.css";
+import { useTranslation } from "react-i18next";
 
 
 function NavTabs() {
@@ -18,6 +19,8 @@ function NavTabs() {
         setCurrentPage(location.pathname);
     }, [location.pathname]);
 
+    const { t } = useTranslation();
+
     return (
         <>
             <nav className="flex items-center md:justify-between bg-mainBg py-2">
@@ -27,14 +30,14 @@ function NavTabs() {
                 <div className="flex-grow flex flex-col items-center justify-center pt-4">
                     <p className="lora600 text-lg sm:text-3xl md:text-4xl lg:text-5xl ">MAYOR SECURITY LLC</p>
                     <p className="lora400 text-xs md:text-base pt-2 pb-4">
-                        "Your Safety is Our Priority"
+                        "{t("slogan")}"
                     </p>
                     <div className="lora500 md:text-base text-sm md:flex space-x-8 justify-center hidden">
-                        <Link to="/" className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Home</Link>
+                        <Link to="/" className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>{t("home")}</Link>
                         <Separator orientation="vertical" className="h-6" />
-                        <Link to="/About" className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 hover:text-red-500 mr-4 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>About Us</Link>
+                        <Link to="/About" className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 hover:text-red-500 mr-4 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>{t("about")}</Link>
                         <Separator orientation="vertical" className="h-6" />
-                        <Link to="/Contact" className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Contact Us</Link>
+                        <Link to="/Contact" className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4 hover:text-red-500 text-red-600' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>{t("contact")}</Link>
                     </div>
                 </div>
                 <div className="block md:hidden ml-auto">
@@ -50,9 +53,9 @@ function NavTabs() {
             </nav>
             <div className={`w-full ${isActive ? 'flex flex-col bg-mainBg' : 'hidden'}`} id="navMenu">
                 <div className="lora500 lg:text-lg md:text-base sm:text-sm mr-5 ml-4 mb-2">
-                    <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0   mr-4' : 'block mt-4 md:inline-block md:mt-0  mr-4'}>Home</Link>
-                    <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>About</Link>
-                    <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>Contact Us</Link>
+                    <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'font-bold block mt-4 md:inline-block md:mt-0   mr-4' : 'block mt-4 md:inline-block md:mt-0  mr-4'}>{t("home")}</Link>
+                    <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>{t("about")}</Link>
+                    <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'font-bold block mt-4 md:inline-block md:mt-0 mr-4' : 'block mt-4 md:inline-block md:mt-0 mr-4'}>{t("contact")}</Link>
                 </div>
             </div>
         </>

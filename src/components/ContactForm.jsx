@@ -3,6 +3,7 @@ import { useForm } from '@formspree/react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import "../styles/Fonts.css";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
   const [state, handleSubmitFormspree] = useForm("xnnjvkgw");
@@ -76,6 +77,9 @@ function ContactForm() {
     window.history.back();
   };
 
+  const { t } = useTranslation();
+
+
   return (
     <>
       {submitted && (
@@ -90,24 +94,23 @@ function ContactForm() {
             >
               &times;
             </button>
-            <h2 className="text-2xl font-bold mb-4">Your message has been delivered!</h2>
-            <p className="text-gray-700 mb-4">Thank you for reaching out Mayor Security, LCC - we will get in touch soon!</p>
-            <p className="text-gray-500">✨ Have a splendid day! ✨</p>
+            <h2 className="text-2xl font-bold mb-4">{t("message1")}</h2>
+            <p className="text-gray-700 mb-4">{t("message2")} Mayor Security, LCC - {t("message3")}</p>
+            <p className="text-gray-500">✨ {t("message4")} ✨</p>
           </div>
         </div>
       )}
 
       <div className="flex justify-center items-center ml-4 mr-4 mb-4">
         <form onSubmit={handleSubmit} className="p-5 md:w-3/4 w-full  bg-gray-100 rounded-lg">
-          <h2 className="lora600 text-2xl font-extrabold ml-4 my-3 tracking-normal">Get In Touch</h2>
-          <p className="roboto text-black mb-2 ml-4">If you have any questions or comments, please fill out this form and we’ll get back to you as soon
-            as we can.  If you need to speak with someone right away you can call us at (720) 468-2411.  We’re looking forward to hearing from you!</p>
+          <h2 className="lora600 text-2xl font-extrabold ml-4 my-3 tracking-normal">{t("getInTouch")}</h2>
+          <p className="roboto text-black mb-2 ml-4">{t("questions")}</p>
           {/* <h2 className="text-xl font-bold tracking-normal ml-4 mt-4 md:mt-8 mb-5 md:mb-5">Drop us a line</h2> */}
-          {!fieldsCompleted && <p className="text-red-500 text-xs mt-2">Please fill out all required fields.</p>}
+          {!fieldsCompleted && <p className="text-red-500 text-xs mt-2">{t("fill")}</p>}
 
           <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className="mx-4">
-              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Name</label>
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">{t("name")}</label>
               <input
                 name="firstName"
                 value={firstName}
@@ -117,11 +120,11 @@ function ContactForm() {
                 placeholder="John"
                 onChange={handleChange}
               />
-              {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
+              {nameRequired && <p className="text-red-500 text-xs mt-2">{t("nameValid")}</p>}
             </div>
 
             <div className="mx-4">
-              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Last Name</label>
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">{t("lastName")}</label>
               <input
                 name="lastName"
                 value={lastName}
@@ -131,13 +134,13 @@ function ContactForm() {
                 placeholder="Doe"
                 onChange={handleChange}
               />
-              {nameRequired && <p className="text-red-500 text-xs mt-2">Last Name is required.</p>}
+              {nameRequired && <p className="text-red-500 text-xs mt-2">{t("lastNameValid")}</p>}
             </div>
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
             <div className="mb-2 mx-4">
-              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Email</label>
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">{t("email")}</label>
               <input
                 name="email"
                 value={email}
@@ -147,12 +150,12 @@ function ContactForm() {
                 placeholder="john.doe@example.com"
                 onChange={handleChange}
               />
-              {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
-              {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
+              {emailRequired && <p className="text-red-500 text-xs mt-2">{t("emailValid")}</p>}
+              {!emailValid && email && <p className="text-red-500 text-xs mt-2">{t("emailValid2")}</p>}
             </div>
 
             <div className="mb-2 ml-4 mr-4">
-              <label className="lora400 block text-gray-700 text-sm font-bold my-2">Phone Number</label>
+              <label className="lora400 block text-gray-700 text-sm font-bold my-2">{t("phone")}</label>
               <PhoneInput
                 name="phone"
                 value={phone}
@@ -161,7 +164,7 @@ function ContactForm() {
                 className='lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                 onChange={handlePhoneChange}
                 defaultCountry="US" />
-              {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone Number is required.</p>}
+              {phoneRequired && <p className="text-red-500 text-xs mt-2">{t("phoneValid")}</p>}
               {/* <input
             name="phone"
             value={phone}
@@ -175,7 +178,7 @@ function ContactForm() {
           </div>
 
           <div className="mb-4 mx-4">
-            <label className="lora400 block text-gray-700 text-sm font-bold my-2">I am interested in:</label>
+            <label className="lora400 block text-gray-700 text-sm font-bold my-2">{t("interest")}</label>
             <div className="relative">
               <select
                 name="inquiry"
@@ -183,38 +186,39 @@ function ContactForm() {
                 onChange={handleChange}
                 className="lora400 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
               >
-                <option value="" disabled>I am looking for:</option>
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Security Services">Security Services</option>
-                <option value="Corporate Security Solutions">Corporate Security Solutions</option>
-                <option value="Home Security Systems">Home Security Systems</option>
-                <option value="Event Security Services">Event Security Services</option>
-                <option value="Security Consultations">Security Consultations</option>
+                <option value="" disabled>{t("option1")}</option>
+                <option value="General Inquiry">{t("option2")}</option>
+                <option value="Security Services">{t("option3")}</option>
+                <option value="Corporate Security Solutions">{t("option4")}</option>
+                <option value="Corporate Security Solutions">{t("option5")}</option>
+                <option value="Home Security Systems">{t("option6")}</option>
+                <option value="Event Security Services">{t("option7")}</option>
+                <option value="Security Consultations">{t("option8")}</option>
                 {/* <option value="Careers">Careers</option> */}
                 {/* <option value="Feedback">Feedback</option> */}
-                <option value="Other">Other</option></select>
+                <option value="Other">{t("option9")}</option></select>
             </div>
           </div>
 
           <div className="mb-6 ml-4 mr-4">
-            <label className="lora400 block text-gray-700 text-sm font-bold mb-2">Message</label>
+            <label className="lora400 block text-gray-700 text-sm font-bold mb-2">{t("message")}</label>
             <textarea
               name="message"
               className="lora400 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Message for Mayor Security, LCC"
+              placeholder={t("msg")}
               value={message}
               onChange={handleChange}
               rows={5}
             ></textarea>
-            {messageRequired && <p className="text-red-500 text-xs mt-2">Message is required.</p>}
+            {messageRequired && <p className="text-red-500 text-xs mt-2">{t("messageValid")}</p>}
           </div>
 
           <div className="lora600 flex items-center justify-center space-x-2">
             <button type="submit" disabled={state.submitting} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-              Send
+              {t("submit")}
             </button>
             <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleCancel}>
-              Cancel
+              {t("cancel")}
             </button>
           </div>
         </form>

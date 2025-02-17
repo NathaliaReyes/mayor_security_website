@@ -4,11 +4,13 @@ import Test2 from "../../assets/testimonials/test2.jpg";
 import Test3 from "../../assets/testimonials/test3.jpg";
 import Test4 from "../../assets/testimonials/test4.jpg";
 import "../../styles/Fonts.css";
+import { useTranslation } from "react-i18next";
 
 export default function CarouselTestimonials() {
+  const { t } = useTranslation();
   return (
     <div className="px-2 pb-2 justify-center items-center">
-      <h2 className="roboto700 text-lg sm:text-xl font-extrabold text-center text-gray-800 mt-5 mb-3">What Our Clients Say</h2>
+      <h2 className="lora600 text-lg sm:text-xl font-extrabold text-center text-gray-800 mt-5 mb-3">{t("whatClientsSay")}</h2>
       <Carousel className="rounded-xl ">
         <div className="relative h-full w-full">
           <img
@@ -30,8 +32,7 @@ export default function CarouselTestimonials() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Mayor Security Company is our trusted partner for
-                ensuring the safety of our retail locations."
+                "{t("test1")}"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -57,9 +58,7 @@ export default function CarouselTestimonials() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Mayor Security LLC delivers comprehensive
-                security services for our premises with
-                professionalism and adaptability."
+                "{t("test2")}"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -86,9 +85,7 @@ export default function CarouselTestimonials() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-sm opacity-80"
               >
-                "Mayor Security company maintains a safe
-                environment for our residents at Marq Iliff
-                Apartments."
+                "{t("test3")}"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -114,10 +111,7 @@ export default function CarouselTestimonials() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-sm opacity-80"
               >
-                "Mayor Security Company's guards have been instrumental in
-                safeguarding our jewelry store. Their professionalism and
-                vigilance provide reassurance to both our staff and customers,
-                ensuring a secure shopping environment."
+                "{t("test4")}"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>

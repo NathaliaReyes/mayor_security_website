@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Card } from 'flowbite-react';
 import GoogleReview from '../home/GoogleReview';
 import "../../styles/Fonts.css";
+import { useTranslation } from "react-i18next";
 
 const ResponsiveIframe = () => {
+
     // Initial state for iframe height
     const [iframeHeight, setIframeHeight] = useState('300px'); // Default height
 
@@ -29,7 +31,7 @@ const ResponsiveIframe = () => {
 
     return (
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.818320343149!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c63dd643fa75b%3A0x82634622fac345f9!2sMayor%20Security%20LLC!5e0!3m2!1ses!2sus!4v1738687444118!5m2!1ses!2sus" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.818320343149!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c63dd643fa75b%3A0x82634622fac345f9!2sMayor%20Security%20LLC!5e0!3m2!1ses!2sus!4v1738687444118!5m2!1ses!2sus"
             width="400"
             height={iframeHeight}
             className="border-0 w-full ml-2 mr-2 shadow-lg p-4"
@@ -41,6 +43,7 @@ const ResponsiveIframe = () => {
 };
 
 const LocationMap = () => {
+    const { t } = useTranslation();
     return (
         <>
             <div className="flex flex-col md:flex-row">
@@ -60,18 +63,18 @@ const LocationMap = () => {
                     <div className='justify-evenly flex'>
                         <div className='flex-1'>
                             <h2 className="roboto600 md:text-xl text-lg font-bold md:mb-2">
-                                <i className="fas fa-clock mr-2"></i>Hours
+                                <i className="fas fa-clock mr-2"></i>{t("hours")}
                             </h2>
                             <ul className="list-none leading-normal space-y-0.5">
-                                <li><span className="font-bold roboto700">Mon - Fri: </span>8:00 - 16:30</li>
-                                <li><span className="font-bold roboto700">Sat: </span>8:00 - 12:00</li>
-                                <li><span className="font-bold roboto700">Sun: </span>Closed</li>
+                                <li><span className="font-bold roboto700">{t("mon-fri")} </span>8:00 - 16:30</li>
+                                <li><span className="font-bold roboto700">{t("sat")} </span>8:00 - 12:00</li>
+                                <li><span className="font-bold roboto700">{t("sun")} </span>{t("closed")}</li>
                             </ul>
                         </div>
 
                         <div className='flex-1 md:mx-1'>
                             <h2 className="md:text-xl text-lg font-bold roboto600 md:mb-2">
-                                <i className="fas fa-envelope mr-2"></i>Contact Us
+                                <i className="fas fa-envelope mr-2"></i>{t("contactUs")}
                             </h2>
                             <p>
                                 <a className="text-blueMedium hover:text-blue-gray-600" href="tel:+17204682411">+1 (720) 468-2411</a>
@@ -84,13 +87,13 @@ const LocationMap = () => {
 
                     <div className='my-4'>
                         <h2 className="md:text-xl text-lg font-bold roboto600">
-                            <i className="fas fa-map-marker-alt mr-2 mb-2"></i>Location
+                            <i className="fas fa-map-marker-alt mr-2 mb-2"></i>{t("location")}
                         </h2>
                         <p>
                             15290 E 6th Ave Aurora, CO  80011<br />
                             Suite 290 USA <br />
                             <a className="text-blueMedium hover:text-blue-gray-600 flex justify-center font-semibold underline mt-2" href="https://www.google.com/maps/place/Mayor+Security+LLC/@39.7250689,-104.8137654,17z/data=!3m1!4b1!4m6!3m5!1s0x876c63dd643fa75b:0x82634622fac345f9!8m2!3d39.7250648!4d-104.8111905!16s%2Fg%2F11lz_9yyvd?hl=es&entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                                Get Directions ⭢
+                                {t("getDir")} ⭢
                             </a>
                         </p>
                     </div>

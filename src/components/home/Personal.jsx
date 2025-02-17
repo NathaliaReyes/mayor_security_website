@@ -5,11 +5,12 @@ import Banner from '@/assets/home/portadams.jpg';
 //Videos:
 import video from '@/assets/home/Video_Mayor_Security.mp4';
 
-
 import "../../styles/Fonts.css";
+import { useTranslation } from "react-i18next";
 // import { Button } from "@/components/ui/button";
 
 const Personal = () => {
+    const { t } = useTranslation();
     return (
         <div className='relative gap-6 justify-content-center items-center text-center px-8 py-4'>
             <div className='absolute inset-0' style={{ backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
@@ -23,50 +24,50 @@ const Personal = () => {
             <div className="relative grid grid-cols-1 md:grid-cols-3">
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4">
-                        Reliable
+                        {t("reliable")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        Our highly trained staff ensures safety at all times, always ready to act when needed.
+                        {t("reliableText")}
                     </p>
                 </div>
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4">
-                        Professional
+                        {t("professional")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        Our guards uphold professionalism, representing your company with respect and integrity.
+                        {t("professionalText")}
                     </p>
                 </div>
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4 tracking-tight">
-                        Vigilant
+                        {t("vigilant")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        Always alert, our guards identify risks early to prioritize your safety and security.
+                        {t("vigilantText")}
                     </p>
                 </div>
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4 tracking-tight">
-                        Approachable
+                        {t("approachable")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        Our guards foster open communication, ready to address any questions or concerns.
+                        {t("approachableText")}
                     </p>
                 </div>
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4 tracking-tight">
-                        Experienced
+                        {t("experienced")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        With years of experience, our team handles diverse situations with skill and expertise.
+                        {t("experiencedText")}
                     </p>
                 </div>
                 <div className="flex flex-col items-center mx-6 tracking-tight p-4 hover:shadow-lg rounded-xl text-gray-50">
                     <span id="targetId" className="roboto600 text-lg mt-4 tracking-tight">
-                        Adaptable
+                        {t("adaptable")}
                     </span>
                     <p className="roboto mt-1 text-center text-sm font-bold">
-                        We offer tailored solutions to meet unique needs and handle any security challenge.
+                        {t("adaptableText")}
                     </p>
                 </div>
             </div>
