@@ -10,7 +10,7 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bottom-0 w-full flex flex-col items-center justify-center p-3 bg-black">
+    <footer className="bottom-0 w-full flex flex-col items-center justify-center p-3 bg-foreground">
       <div>
         <p className="m-3 text-center text-gray-200 text-xs opacity-50">{t("connectWithUs")}</p>
       </div>

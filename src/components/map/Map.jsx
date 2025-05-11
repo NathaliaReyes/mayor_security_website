@@ -46,9 +46,9 @@ const LocationMap = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row md:container">
                 {/* Map section */}
-                <div className="w-full lg:w-7/12 py-4">
+                <div className="w-full lg:w-6/12 py-4">
                     <ResponsiveIframe />
                     {/* Text section */}
                     {/* <div className="text-center m-3">
@@ -59,37 +59,37 @@ const LocationMap = () => {
                 </div>
 
                 {/* lOCATION SECTION */}
-                <div className="lg:w-5/12 w-full my-3 md:my-auto  mx-auto text-center">
-                    <div className='justify-evenly flex'>
+                <div className="lg:w-5/12 w-full my-3 md:my-auto mx-auto text-center">
+                    <div className='justify-between flex mt-2'>
                         <div className='flex-1'>
-                            <h2 className="roboto600 md:text-xl text-lg font-bold md:mb-2">
-                                <i className="fas fa-clock mr-2"></i>{t("hours")}
+                            <h2 className="roboto600 text-sm md:text-lg xl:text-xl font-bold md:mb-2">
+                                <i className="fas fa-clock mr-1 sm:mr-2"></i>{t("hours")}
                             </h2>
-                            <ul className="list-none leading-normal space-y-0.5">
+                            <ul className="mx-1 text-sm md:text-base xl:text-lg list-none leading-normal space-y-0.5">
                                 <li><span className="font-bold roboto700">{t("mon-fri")} </span>8:00 - 16:30</li>
                                 <li><span className="font-bold roboto700">{t("sat")} </span>8:00 - 12:00</li>
                                 <li><span className="font-bold roboto700">{t("sun")} </span>{t("closed")}</li>
                             </ul>
                         </div>
 
-                        <div className='flex-1 md:mx-1'>
-                            <h2 className="md:text-xl text-lg font-bold roboto600 md:mb-2">
-                                <i className="fas fa-envelope mr-2"></i>{t("contactUs")}
+                        <div className='flex-1 mx-1'>
+                            <h2 className="text-sm md:text-lg xl:text-xl font-bold roboto600 md:mb-2">
+                                <i className="fas fa-envelope mr-1 sm:mr-2"></i>{t("contactUs")}
                             </h2>
-                            <p>
+                            <p className='text-sm md:text-base xl:text-lg my-1'>
                                 <a className="text-blueMedium hover:text-blue-gray-600" href="tel:+17204682411">+1 (720) 468-2411</a>
                             </p>
-                            <p>
+                            <p className='text-sm md:text-base xl:text-lg my-1'>
                                 <a className="text-blueMedium hover:text-blue-gray-600" href="mailto:billing@mayorsecurity.com">billing@mayorsecurity.com</a>
                             </p>
                         </div>
                     </div>
 
                     <div className='my-4'>
-                        <h2 className="md:text-xl text-lg font-bold roboto600">
+                        <h2 className="text-sm md:text-lg xl:text-xl font-bold roboto600">
                             <i className="fas fa-map-marker-alt mr-2 mb-2"></i>{t("location")}
                         </h2>
-                        <p>
+                        <p className='text-sm md:text-base xl:text-lg'>
                             15290 E 6th Ave Aurora, CO  80011<br />
                             Suite 290 USA <br />
                             <a className="text-blueMedium hover:text-blue-gray-600 flex justify-center font-semibold underline mt-2" href="https://www.google.com/maps/place/Mayor+Security+LLC/@39.7250689,-104.8137654,17z/data=!3m1!4b1!4m6!3m5!1s0x876c63dd643fa75b:0x82634622fac345f9!8m2!3d39.7250648!4d-104.8111905!16s%2Fg%2F11lz_9yyvd?hl=es&entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
