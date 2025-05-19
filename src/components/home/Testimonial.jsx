@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 export default function CarouselTestimonials() {
   const { t } = useTranslation();
   return (
-    <div className="px-2 pb-2 justify-center items-center">
+    <div className="px-2 pb-2 justify-center items-center md:container">
       <h2 className="lora600 text-lg sm:text-xl font-extrabold text-center text-gray-800 mt-5 mb-3">{t("whatClientsSay")}</h2>
       <Carousel className="rounded-xl ">
         <div className="relative h-full w-full">
