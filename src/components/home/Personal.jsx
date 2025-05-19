@@ -12,11 +12,11 @@ import { useTranslation } from "react-i18next";
 const Personal = () => {
     const { t } = useTranslation();
     return (
-        <div className='relative gap-6 justify-content-center items-center text-center px-8 py-4'>
-            <div className='absolute inset-0' style={{ backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+        <div className='relative gap-6 justify-content-center items-center text-center px-8 py-4 md:container'>
+            <div className='absolute inset-0' style={{ backgroundImage: `url(${Banner})`, backgroundPosition: 'center' }}></div>
             <div className='absolute inset-0 bg-black opacity-90'></div>
-            <div className="relative z-10 video-container mx-auto mb-6 flex justify-center">
-                <video className="w-3/4 h-auto flex" controls>
+            <div className="relative z-10 video-container mb-6 flex justify-center">
+                <video className="w-full h-auto flex" controls>
                     <source src={video} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

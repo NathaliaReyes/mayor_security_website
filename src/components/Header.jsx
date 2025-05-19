@@ -4,7 +4,7 @@ import Nav from './NavTabs';
 function Header() {
   return (
     <>
-      <header>
+      <header className='md:container'>
         <Nav />
       </header>
     </>

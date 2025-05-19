@@ -19,14 +19,14 @@ const Home = () => {
                     Your browser does not support the video tag.
                 </video>
             </div> */}
-            <div className=' inset-0' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className='md:container inset-0' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className=' inset-0 bg-black opacity-100'>
-                <div className=" relative z-10 video-container flex justify-center md:py-4">
+                {/* <div className=" relative z-10 video-container flex justify-center md:py-4">
                     <video className="w-auto md:h-96 flex" controls>
                         <source src={videoBanner2} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div>
+                </div> */}
 
             </div>
             </div>
