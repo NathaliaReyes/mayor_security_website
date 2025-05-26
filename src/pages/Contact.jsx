@@ -1,12 +1,13 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
-import bgContact from '../assets/home/bg-contact.jpg';
+import Banner from '@/assets/home/guardia.jpg';
+// import bgContact from '../assets/home/bg-contact.jpg';
 
 const Contact = () => {
   return (
     <div className="relative">
       <img
-        src={bgContact}
+        src={Banner}
         alt="background contact"
         className="absolute inset-0 w-full h-full object-cover opacity-70 md:container"
         loading="lazy"

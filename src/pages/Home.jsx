@@ -7,6 +7,8 @@ import Map from '../components/map/Map';
 import BannerServices from '@/components/home/BannerServices';
 import '../styles/Home.css'; // Import the CSS file
 import CarouselTestimonials from '@/components/home/Testimonial';
+import FAQComponent from '@/components/home/FAQComponent';
+import ProfessionalSecuritySection from '@/components/home/LearnMore';
 // import TeamCard from '../components/home/professionalProfile';
 // import GoogleReview from '@/components/home/GoogleReview';
 
@@ -20,13 +22,13 @@ const Home = () => {
                 </video>
             </div> */}
             <div className='md:container inset-0' style={{ backgroundImage: `url(${Image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className=' inset-0 bg-black opacity-100'>
-                {/* <div className=" relative z-10 video-container flex justify-center md:py-4">
-                    <video className="w-auto md:h-96 flex" controls>
+            <div className=' inset-0 bg-black/90'>
+                <div className=" relative z-10 justify-center md:py-4">
+                    <video className="w-full md:h-96" controls>
                         <source src={videoBanner2} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div> */}
+                </div>
 
             </div>
             </div>
@@ -60,6 +62,8 @@ const Home = () => {
             {/* </div> */}
             {/* </div> */}
             <BannerServices />
+            <FAQComponent />
+            <ProfessionalSecuritySection />
             <Map />
             <CarouselTestimonials />
         </>

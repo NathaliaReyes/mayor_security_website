@@ -70,7 +70,7 @@ function NavTabs() {
 
                     {/* Botón de hamburguesa para dispositivos móviles */}
                     <div className="md:hidden">
-                        <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded-xl bg-yellow-300 hover:bg-customGray p-2 mx-2">
+                        <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded-xl bg-mainYellow hover:bg-customGray p-2 mx-2">
                             <div className="w-3 h-0.5 bg-stone"></div>
                             <div className="w-6 h-0.5 bg-stone"></div>
                             <div className="w-3 h-0.5 bg-stone"></div>

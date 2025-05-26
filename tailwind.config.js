@@ -27,7 +27,7 @@ module.exports = withMT({
   			mainBg: '#efefed',
   			darkBg: '#000000',
   			clear: '#b16809',
-  			mainYellow: '#c78b14',
+  			mainYellow: '#FFDE59',
   			clearYellow: '#d8ae5b',
   			mainBrown: '#533626',
   			border: 'hsl(var(--border))',

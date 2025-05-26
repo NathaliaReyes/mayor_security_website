@@ -27,8 +27,8 @@ const BannerInfo = () => {
         // </div>
 
         <div className='sticky top-0 bg-black z-40 transition-all duration-150 h-12 md:container'>
-            <div className="mx-auto flex items-center ">
-                <div className="flex items-center space-x-4 ml-2">
+            <div className="flex items-center m-1">
+                <div className="flex items-center space-x-1 md:space-x-4 ml-2">
                     <div className="flex items-center text-background">
                         <Phone size={16} className="mr-1"/>
                         <span className="lora500 text-sm cursor-pointer hidden md:block">+1 (800) 555-7890</span>
@@ -38,7 +38,7 @@ const BannerInfo = () => {
                         <span className="lora500 text-sm cursor-pointer hidden md:block">contact@mayorsecurity.com</span>
                     </div>
                 </div>
-                <div className="space-x-3 text-background justify-end ml-auto mr-2">
+                <div className="space-x-2 md:space-x-3 text-background justify-end ml-auto mr-2">
                     <a href="/contact" className="text-sm hover:text-blue-300">Careers</a>
                     <a href="#" className="text-sm hover:text-blue-300">FAQ</a>
                     <a href="#" className="text-sm hover:text-blue-300">Client Portal</a>
