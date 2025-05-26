@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import { ChevronDown } from "lucide-react";
-import "@/styles/FAQ.css";
+import "@/styles/faq.css";
 
 const AccordionDemo = () => (
 	<Accordion.Root
