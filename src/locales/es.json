@@ -73,6 +73,20 @@
     "messageValid": "Mensaje es requerido",
     "submit": "Enviar",
     "cancel": "Cancelar",
-    "msg":"Mensaje para Mayor Security, LCC"
+    "msg":"Mensaje para Mayor Security, LCC",
+    "FAQ": "Preguntas Frecuentes",
+    "FAQDesc": "En Mayor Security, entendemos que nuestros clientes a menudo tienen preguntas sobre nuestros servicios de seguridad. Por eso, hemos creado una sección de Preguntas Frecuentes (FAQ) para responder las dudas más comunes. Si no encuentras la respuesta que buscas, no dudes en contactar a nuestro equipo de atención al cliente para recibir asistencia personalizada.",
+    "FAQ1": "¿Tengo que pagar por una cotización?",
+    "FAQ1Desc": "¡No! Ofrecemos cotizaciones gratuitas para todos nuestros servicios. También podemos brindarte múltiples opciones con diferentes cantidades de visitas y duraciones, para que elijas la que mejor se adapte a tus necesidades de seguridad.",
+    "FAQ2": "¿Puedo cambiar mi plan más adelante?",
+    "FAQ2Desc": "Sí, puedes mejorar o reducir tu plan de servicio en cualquier momento. Solo tienes que informarnos y con gusto te ofreceremos nuevas propuestas que se adapten mejor a tus necesidades.",
+    "FAQ3": "¿Cuál es su política de cancelación?",
+    "FAQ3Desc": "A menos que exista un contrato específico por un período determinado, puede cancelar nuestros servicios en cualquier momento con un aviso de 30 días de anticipación.",
+    "FAQ4": "¿Cómo funciona la facturación?",
+    "FAQ4Desc": "Contamos con un sistema de facturación simple que te permite pagar por los servicios de forma mensual, quincenal o semanal. Puedes elegir la opción que mejor se adapte a tus necesidades.",
+    "FAQ5": "¿Qué tipos de servicios de seguridad ofrecen?",
+    "FAQ5Desc": "Ofrecemos una amplia gama de servicios de seguridad, incluyendo guardias de seguridad desarmados y armados, patrullas móviles, servicios de seguridad para eventos y consultas de seguridad personalizadas. Nuestro equipo está capacitado para adaptarse a diversas situaciones y brindar soluciones efectivas.",
+    "FAQ6": "¿Necesitas orientación experta?",
+    "FAQ6Desc": "Nuestro equipo de expertos está aquí para ayudarte a encontrar la mejor solución de seguridad para tus necesidades. No dudes en contactarnos para recibir asesoramiento personalizado y profesional."
   }
   

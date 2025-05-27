@@ -73,6 +73,20 @@
     "messageValid": "Message is required",
     "submit": "Submit",
     "cancel": "Cancel",
-    "msg":"Message for Mayor Security, LCC"
+    "msg":"Message for Mayor Security, LCC",
+    "FAQ": "Frequently Asked Questions",
+    "FAQDesc": "At Mayor Security, we understand that our customers often have questions about our security services. That's why we've compiled a comprehensive FAQ section to address the most commonly asked questions. If your question isn't listed, feel free to reach out to our customer service team for further assistance.",
+    "FAQ1": "Do I Have To Pay For A Quote?",
+    "FAQ1Desc": "No! we offer a free quotes for all of our services. We can also offer you multiple quotes for different numbers of visits and durations, so you can choose which option better fulfills your security needs!",
+    "FAQ2": "Can I Change My Plan Later?",
+    "FAQ2Desc": "Yes, you can upgrade or downgrade your service plan at any time. Just let us know and we can offer you new proposals that will better suit your needs!",
+    "FAQ3": "What Is Your Cancellation Policy?",
+    "FAQ3Desc": "Unless there is a specific contract for a fixed term, you may cancel our services at any time with a 30-day notice in advance.",
+    "FAQ4": "How Does Billing Work?",
+    "FAQ4Desc": "We have a simple billing system that allows you to pay for services on a monthly, biweekly, or weekly basis. You can choose the option that best fits your needs.",
+    "FAQ5": "What Types of Security Services Do You Offer?",
+    "FAQ5Desc": "We offer a wide range of security services, including unarmed and armed security guards, mobile patrols, event security, and more. Our team can work with you to create a customized security plan that meets your specific needs.",
+    "FAQ6": "Need Expert Guidance?",
+    "FAQ6Desc": "Our security consultants are here to provide expert advice and tailored solutions for your security challenges. Contact us today to schedule a consultation and enhance your security strategy."
 
   }

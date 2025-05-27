@@ -56,7 +56,7 @@ const BannerInfo = () => {
                 <div className="flex items-center space-x-1 md:space-x-4 ml-2">
                     <div className="flex items-center text-background">
                         <Phone size={16} className="mr-1" />
-                        <span className="lora500 text-sm cursor-pointer hidden md:block">+1 (800) 555-7890</span>
+                        <span className="lora500 text-sm cursor-pointer hidden md:block">+1 (720) 468-2411</span>
                     </div>
                     <div className="flex items-center text-background">
                         <Mail size={16} className="mr-1" />
