@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import { Shield, Users, Building, Calendar, Award, Phone, Mail, MapPin, ChevronRight, Menu, X, Lock, Briefcase, ShieldCheck } from 'lucide-react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-
 function NavTabs() {
     const location = useLocation();
     const [currentPage, setCurrentPage] = useState(location.pathname);
@@ -63,10 +62,10 @@ function NavTabs() {
             <header className="shadow-md py-2 md:py-3">
                 <div className="flex pl-1 justify-between items-center">
                     {/* Logo y nombre de la empresa */}
-                    <div className="flex items-center font-bold text-dark">
+                    <Link to="/" className="flex items-center font-bold text-dark hover:opacity-80 transition-opacity">
                         <img src={logo} alt="logo" className='md:h-16 md:w-16 sm:h-14 sm:w-14 h-10 w-12'></img>
                         <span className='text-lg sm:text-lg md:text-xl lg:text-2xl'>MAYOR SECURITY LLC</span>
-                    </div>
+                    </Link>
 
                     {/* Botón de hamburguesa para dispositivos móviles */}
                     <div className="md:hidden">
@@ -89,7 +88,7 @@ function NavTabs() {
                         {/* Botón primero en su posición original */}
                         {/* <div className="mr-6"> */}
                         <Link to="/Contact">
-                            <button className="bg-red-600 hover:bg-red-700 text-background font-bold py-2 px-4 rounded-md mr-1">
+                            <button className="bg-red-600 hover:bg-red-700 text-background font-bold py-2 px-6 rounded-md">
                                 {t("quote")}
                             </button>
                         </Link>

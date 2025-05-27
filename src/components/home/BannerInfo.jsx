@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import bg from '../../assets/home/bg-rustic.jpg';
 import { Button } from "@/components/ui/button";
 import "../../styles/Fonts.css";
@@ -8,6 +9,30 @@ import { Shield, Users, Building, Calendar, Award, Phone, Mail, MapPin, ChevronR
 
 const BannerInfo = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleFAQClick = (e) => {
+        e.preventDefault();
+
+        // Si estamos en homepage (/), hacer scroll al FAQ
+        if (location.pathname === '/') {
+            const faqElement = document.getElementById('faq');
+            if (faqElement) {
+                faqElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Si estamos en otra página, ir a homepage y luego al FAQ
+            navigate('/');
+            // Pequeño delay para que la página cargue antes del scroll
+            setTimeout(() => {
+                const faqElement = document.getElementById('faq');
+                if (faqElement) {
+                    faqElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
     return (
         // <div className='md:container bg-foreground flex px-1 items-center justify-between md:px-4 py-2'>
         //     <LanguageSwitcher />
@@ -30,7 +55,7 @@ const BannerInfo = () => {
             <div className="flex items-center m-1">
                 <div className="flex items-center space-x-1 md:space-x-4 ml-2">
                     <div className="flex items-center text-background">
-                        <Phone size={16} className="mr-1"/>
+                        <Phone size={16} className="mr-1" />
                         <span className="lora500 text-sm cursor-pointer hidden md:block">+1 (800) 555-7890</span>
                     </div>
                     <div className="flex items-center text-background">
@@ -40,12 +65,17 @@ const BannerInfo = () => {
                 </div>
                 <div className="space-x-2 md:space-x-3 text-background justify-end ml-auto mr-2">
                     <a href="/contact" className="text-sm hover:text-blue-300">Careers</a>
-                    <a href="#" className="text-sm hover:text-blue-300">FAQ</a>
-                    <a href="#" className="text-sm hover:text-blue-300">Client Portal</a>
+                    <button
+                        onClick={handleFAQClick}
+                        className="text-sm hover:text-blue-300 cursor-pointer bg-transparent border-none"
+                    >
+                        FAQ
+                    </button>
+                    {/* <a href="/contact" className="text-sm hover:text-blue-300">Client Portal</a> */}
                 </div>
-                <LanguageSwitcher/>
+                <LanguageSwitcher />
             </div>
-      </div>
+        </div>
     )
 };
 
