@@ -103,7 +103,7 @@ function ContactForm() {
 
       <div className="flex justify-center items-center ml-4 mr-4 mb-4">
         <form onSubmit={handleSubmit} className="p-5 md:w-3/4 w-full bg-gray-100/70 rounded-lg">
-          <h2 className="lora600 text-2xl font-extrabold ml-4 my-3 tracking-normal">{t("getInTouch")}</h2>
+          <h2 id="contact" className="lora600 text-2xl font-extrabold ml-4 my-3 tracking-normal">{t("getInTouch")}</h2>
           <p className="roboto text-black mb-2 ml-4">{t("questions")}</p>
           {/* <h2 className="text-xl font-bold tracking-normal ml-4 mt-4 md:mt-8 mb-5 md:mb-5">Drop us a line</h2> */}
           {!fieldsCompleted && <p className="text-red-500 text-xs mt-2">{t("fill")}</p>}

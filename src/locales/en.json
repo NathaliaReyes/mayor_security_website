@@ -7,6 +7,7 @@
     "about": "About Us",
     "services": "Services",
     "contact": "Contact",
+    "careers": "Careers",
     "help":"How Can We Help You?",
     "unarmed": "Unarmed Security Guards",
     "unarmedText": "Our dedicated  security guards are the front-line protectors of your assets and peace of mind",
@@ -87,6 +88,7 @@
     "FAQ5": "What Types of Security Services Do You Offer?",
     "FAQ5Desc": "We offer a wide range of security services, including unarmed and armed security guards, mobile patrols, event security, and more. Our team can work with you to create a customized security plan that meets your specific needs.",
     "FAQ6": "Need Expert Guidance?",
-    "FAQ6Desc": "Our security consultants are here to provide expert advice and tailored solutions for your security challenges. Contact us today to schedule a consultation and enhance your security strategy."
+    "FAQ6Desc": "Our security consultants are here to provide expert advice and tailored solutions for your security challenges. Contact us today to schedule a consultation and enhance your security strategy.",
+    "FooterDesc": "Providing professional security services you can trust with trained personnel for all your security needs."
 
   }

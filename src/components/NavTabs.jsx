@@ -63,7 +63,7 @@ function NavTabs() {
                 <div className="flex pl-1 justify-between items-center">
                     {/* Logo y nombre de la empresa */}
                     <Link to="/" className="flex items-center font-bold text-dark hover:opacity-80 transition-opacity">
-                        <img src={logo} alt="logo" className='md:h-16 md:w-16 sm:h-14 sm:w-14 h-10 w-12'></img>
+                        <img id="logo" src={logo} alt="logo" className='md:h-16 md:w-16 sm:h-14 sm:w-14 h-10 w-12'></img>
                         <span className='text-lg sm:text-lg md:text-xl lg:text-2xl'>MAYOR SECURITY LLC</span>
                     </Link>
 

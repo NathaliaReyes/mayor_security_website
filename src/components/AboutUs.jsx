@@ -5,7 +5,7 @@ import officersImage from '@/assets/images/guardia2.jpeg';
 
 const AboutUs = () => {
     return (
-        <section className="pb-14 px-4 bg-white">
+        <section id="aboutUs" className="pb-14 px-4 bg-white">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
